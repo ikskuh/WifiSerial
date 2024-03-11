@@ -8,12 +8,24 @@ Features:
 * Standard Port 23 for pure serial communications
 * Configuration Port for changing parameters
 
+## Hardware + Pinout
+
+I use a NodeMCU 32S, but it doesn't really matter, which ESP32 board you use.
+You can use any ESP32 based hardware with the following pinout:
+
+| ESP GPIO | Function       |
+| -------- | -------------- |
+| 1        | Debug/Prog TXD |
+| 3        | Debug/Prog RXD |
+| 16       | UART RXD       |
+| 17       | UART TXD       |
+
 ## Data Port
 
 * TCP Port 23
 * Only a single connection at a time.
 * Everything sent is transmitted via the UART.
-* Everything received via the is sent back to the host.
+* Everything received via the UART is sent back to the host.
 
 ## Configuration Port
 
